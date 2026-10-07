@@ -1,0 +1,230 @@
+Performance Test
+test 1: threads = 1, particles = 10000, timesteps = 20, size of timestep = 0.01
+
+basic:
+time 1: 9.022790e+00 seconds
+time 2: 9.042720e+00 seconds
+time 3: 9.137401e+00 seconds
+time 4: 9.077520e+00 seconds
+time 5: 9.023627e+00 seconds
+mean = 9.0608s
+
+s1 = 9.0608/9.0608 = 1
+e1 = 1/1*100% = 100%
+
+reduced - default:
+time 1: 3.626042e+00 seconds
+time 2: 3.617123e+00 seconds
+time 3: 3.624371e+00 seconds
+time 4: 3.635779e+00 seconds
+time 5: 3.651245e+00 seconds
+mean = 3.6309s
+
+s1 = 3.6309/3.6309 = 1
+e1 = 1/1*100% = 100%
+
+reduced - forces cyclic:
+time 1: 3.619624e+00 seconds
+time 2: 3.611327e+00 seconds
+time 3: 3.610715e+00 seconds
+time 4: 3.621658e+00 seconds
+time 5: 3.638320e+00 seconds
+mean = 3.6203s
+
+s1 = 3.6203/3.6203 = 1
+e1 = 1/1*100% = 100%
+
+reduced - all cyclic:
+time 1: 3.634599e+00 seconds
+time 2: 3.622024e+00 seconds
+time 3: 3.658494e+00 seconds
+time 4: 3.611134e+00 seconds
+time 5: 3.652637e+00 seconds
+mean = 3.6358s
+
+s1 = 3.6358/3.6358 = 1
+e1 = 1/1*100% = 100%
+
+test 2: threads = 4, particles = 10000, timesteps = 20, size of timestep = 0.01
+
+basic:
+time 1: 2.550528e+00 seconds
+time 2: 2.523626e+00 seconds
+time 3: 2.491763e+00 seconds
+time 4: 2.727153e+00 seconds
+time 5: 2.541483e+00 seconds
+mean = 2.5669s
+
+s4 = 9.0608/2.5669 = 3.53
+e4 = 3.53/4*100% = 88.3%
+
+reduced - default:
+time 1: 1.676331e+00 seconds
+time 2: 1.680340e+00 seconds
+time 3: 1.730972e+00 seconds
+time 4: 1.673910e+00 seconds
+time 5: 1.670746e+00 seconds
+mean = 1.6865s
+
+s4 = 3.6309/1.6865 = 2.15
+e4 = 2.15/4*100% = 53.8%
+
+reduced - forces cyclic:
+time 1: 1.004714e+00 seconds
+time 2: 1.018120e+00 seconds
+time 3: 1.048245e+00 seconds
+time 4: 1.024474e+00 seconds
+time 5: 1.004989e+00 seconds
+mean = 1.0201s
+
+s4 = 3.6203/1.0201 = 3.55
+e4 = 3.55/4*100% = 88.8%
+
+reduced - all cyclic:
+time 1: 1.015558e+00 seconds
+time 2: 1.031342e+00 seconds
+time 3: 1.036379e+00 seconds
+time 4: 1.021749e+00 seconds
+time 5: 1.023145e+00 seconds
+mean = 1.0256s
+
+s4 = 3.6358/1.0256 = 3.55
+e4 = 3.55/4*100% = 88.8%
+
+test 3: threads = 8, particles = 10000, timesteps = 20, size of timestep = 0.01
+
+basic:
+time 1: 2.087607e+00 seconds
+time 2: 2.116400e+00 seconds
+time 3: 2.077008e+00 seconds
+time 4: 2.077850e+00 seconds
+time 5: 2.298219e+00 seconds
+mean = 2.1314s
+
+s8 = 9.0608/2.1314 = 4.25
+e8 = 4.25/8*100% = 53.1%
+
+reduced - default:
+time 1: 1.097403e+00 seconds
+time 2: 1.141944e+00 seconds
+time 3: 1.110709e+00 seconds
+time 4: 1.107171e+00 seconds
+time 5: 1.200942e+00 seconds
+mean = 1.1316s
+
+s8 = 3.6309/1.1316 = 3.21
+e8 = 3.21/8*100% = 40.1%
+
+reduced - forces cyclic:
+time 1: 9.165559e-01 seconds
+time 2: 9.030870e-01 seconds
+time 3: 9.571672e-01 seconds
+time 4: 8.935384e-01 seconds
+time 5: 9.473229e-01 seconds
+mean = 0.9235s
+
+s8 = 3.6203/0.9235 = 3.92
+e8 = 3.92/8*100% = 49.0%
+
+reduced - all cyclic:
+time 1: 9.278103e-01 seconds
+time 2: 9.420050e-01 seconds
+time 3: 9.477272e-01 seconds
+time 4: 9.112697e-01 seconds
+time 5: 1.035728e+00 seconds
+mean = 0.9529s
+
+s8 = 3.6358/0.9529 = 3.82
+e8 = 3.82/8*100% = 47.8%
+
+test 4: threads = 16, particles = 10000, timesteps = 20, size of timestep = 0.01
+
+basic:
+time 1: 2.032979e+00 seconds
+time 2: 1.994627e+00 seconds
+time 3: 2.353293e+00 seconds
+time 4: 2.229580e+00 seconds
+time 5: 2.314058e+00 seconds
+mean = 2.1849s
+
+s16 = 9.0608/2.1849 = 4.15
+e16 = 4.15/16*100% = 25.9%
+
+reduced - default:
+time 1: 9.277330e-01 seconds
+time 2: 1.014426e+00 seconds
+time 3: 9.422439e-01 seconds
+time 4: 9.424178e-01 seconds
+time 5: 9.441462e-01 seconds
+mean = 0.9542s
+
+s16 = 3.6309/0.9542 = 3.81
+e16 = 3.81/16*100% = 23.8%
+
+reduced - forces cyclic:
+time 1: 8.632618e-01 seconds
+time 2: 8.722959e-01 seconds
+time 3: 8.788810e-01 seconds
+time 4: 8.728701e-01 seconds
+time 5: 9.144780e-01 seconds
+mean = 0.8804s
+
+s16 = 3.6203/0.8804 = 4.11
+e16 = 4.11/16*100% = 25.7%
+
+reduced - all cyclic:
+time 1: 8.811489e-01 seconds
+time 2: 8.713140e-01 seconds
+time 3: 8.970262e-01 seconds
+time 4: 8.737809e-01 seconds
+time 5: 9.262965e-01 seconds
+mean = 0.8899s
+
+s16 = 3.6358/0.8899 = 4.09
+e16 = 4.09/16*100% = 25.6%
+
+test 5: threads = 32, particles = 10000, timesteps = 20, size of timestep = 0.01
+
+basic:
+time 1: 1.954486e+00 seconds
+time 2: 2.010633e+00 seconds
+time 3: 1.983184e+00 seconds
+time 4: 2.292713e+00 seconds
+time 5: 2.402651e+00 seconds
+mean = 2.1287s
+
+s32 = 9.0608/2.1287 = 4.26
+e32 = 4.26/32*100% = 13.3%
+
+reduced - default:
+time 1: 1.194143e+00 seconds
+time 2: 1.108337e+00 seconds
+time 3: 1.168773e+00 seconds
+time 4: 1.186140e+00 seconds
+time 5: 1.208036e+00 seconds
+mean = 1.1731s
+
+s32 = 3.6309/1.1731 = 3.10
+e32 = 3.10/32*100% = 9.7%
+
+reduced - forces cyclic:
+time 1: 9.858648e-01 seconds
+time 2: 1.051159e+00 seconds
+time 3: 1.100945e+00 seconds
+time 4: 1.140364e+00 seconds
+time 5: 1.192313e+00 seconds
+mean = 1.0941s
+
+s32 = 3.6203/1.0941 = 3.31
+e32 = 3.31/32*100% = 10.3%
+
+reduced - all cyclic:
+time 1: 1.025906e+00 seconds
+time 2: 1.119966e+00 seconds
+time 3: 1.101674e+00 seconds
+time 4: 1.162812e+00 seconds
+time 5: 1.268463e+00 seconds
+mean = 1.1358s
+
+s32 = 3.6358/1.1358 = 3.20
+e32 = 3.20/32*100% = 10.0%

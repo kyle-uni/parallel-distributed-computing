@@ -1,18 +1,16 @@
-/* File:     omp_nbody_red.c
+/* File:     omp_nbody_red_default.c
  *
  * Purpose:  Use OpenMP to parallelize a 2-dimensional n-body solver
  *           that uses the reduced algorithm.  This version uses one
  *           array per thread to store locally computed forces.
  *           These forces are then added into a shared array.  It
- *           uses a block schedule for each of the parallel for
- *           except the loop that computes forces, which uses
- *           a cyclic distribution.
+ *           uses a block schedule for each of the parallel for loops.
  *
- * Compile:  gcc -g -Wall -fopenmp -o omp_nbody_red omp_nbody_red.c -lm
+ * Compile:  gcc -g -Wall -fopenmp -o omp_nbody_red_default omp_nbody_red_default.c -lm
  *           To turn off output (e.g., when timing), define NO_OUTPUT
  *           To get verbose output, define DEBUG
  *
- * Run:      ./omp_nbody_red <number of threads> <number of particles>
+ * Run:      ./omp_nbody_red_default <number of threads> <number of particles>
  *              <number of timesteps>  <size of timestep>
  *              <output frequency> <g|i>
  *              'g': generate initial conditions using a random number
@@ -136,7 +134,7 @@ int main(int argc, char* argv[]) {
 #        endif
          /* Particle n-1 will have all forces computed after call to
           * Compute_force(n-2, . . .) */
-#        pragma omp for schedule(static,1)
+#        pragma omp for
          for (part = 0; part < n-1; part++)
             Compute_force(part, loc_forces + my_rank*n, curr, n);
 #        pragma omp for

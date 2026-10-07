@@ -173,6 +173,9 @@ time 2: 2.023347e+00 seconds
 time 3: 2.022116e+00 seconds
 mean = 2.0189s
 
+s2 = 1.9049/2.0189 = 0.94
+e2 = 0.94/2*100% = 47%
+
 test 3: threads = 4, particles = 2000, timesteps = 50, size of timestep = 0.01
 
 original:
@@ -186,9 +189,6 @@ time 1: 2.022446e+00 seconds
 time 2: 1.958855e+00 seconds
 time 3: 1.971927e+00 seconds
 mean = 1.9844s
-
-s2 = 1.9049/2.0189 = 0.94
-e2 = 0.94/2*100% = 47%
 
 s4 = 1.9049/1.9844 = 0.96
 e4 = 0.96/4*100% = 24%
