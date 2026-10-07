@@ -1,6 +1,6 @@
-# Parallel and Distributed Computing — Submission 1
+# Parallel and Distributed Computing — Assignment Part 1
 
-This repository contains the source code for Submission 1 of the N-body MPI assignment.
+This repository contains the source code and supporting files for Assignment Part 1 of the N-body MPI assignment.
 
 ## Files
 
